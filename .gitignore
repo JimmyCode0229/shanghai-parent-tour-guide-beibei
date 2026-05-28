@@ -1,0 +1,5 @@
+.superpowers/
+.vercel/
+.DS_Store
+docs/
+*.png
