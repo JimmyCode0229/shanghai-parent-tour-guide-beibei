@@ -1,0 +1,394 @@
+:root {
+  color-scheme: light;
+  --ink: #18211f;
+  --muted: #60706c;
+  --soft: #f4f7f2;
+  --paper: #ffffff;
+  --line: #d9e1dd;
+  --green: #2f6f62;
+  --teal: #24576a;
+  --gold: #b88937;
+  --rose: #a8544f;
+  --shadow: 0 16px 40px rgba(38, 70, 83, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--soft);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  line-height: 1.6;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.hero {
+  min-height: 430px;
+  display: flex;
+  align-items: flex-end;
+  padding: 28px 18px;
+  color: #fff;
+  background:
+    linear-gradient(0deg, rgba(24, 33, 31, 0.86), rgba(24, 33, 31, 0.2)),
+    linear-gradient(135deg, rgba(36, 87, 106, 0.95), rgba(47, 111, 98, 0.86)),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/The%20Bund%2C%20Shanghai.jpg?width=1600");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__content,
+.section,
+.footer {
+  width: min(1160px, 100%);
+  margin: 0 auto;
+}
+
+.hero__content {
+  padding-bottom: 10px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: currentColor;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  opacity: 0.76;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 760px;
+  margin-bottom: 14px;
+  font-size: clamp(38px, 8vw, 72px);
+  line-height: 1.06;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+.hero__lead {
+  max-width: 660px;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+}
+
+.hero__badges,
+.tag-row,
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero__badges span,
+.tag-row span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: inherit;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.section {
+  padding: 34px 18px 0;
+}
+
+.section__heading {
+  margin-bottom: 18px;
+}
+
+.section__heading .eyebrow {
+  color: var(--green);
+}
+
+.plans {
+  display: grid;
+  gap: 14px;
+}
+
+.plan-card,
+.filter-group,
+.attraction-card,
+.empty-state {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.plan-card {
+  display: grid;
+  gap: 18px;
+  padding: 18px;
+}
+
+.plan-card__label {
+  margin-bottom: 6px;
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+dl {
+  margin: 0;
+}
+
+.plan-card dl,
+.facts {
+  display: grid;
+  gap: 10px;
+}
+
+dt {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+dd {
+  margin: 0;
+}
+
+.section--filters {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding-bottom: 16px;
+  background: rgba(244, 247, 242, 0.94);
+  backdrop-filter: blur(14px);
+}
+
+.filters {
+  display: grid;
+  gap: 12px;
+}
+
+.filter-group {
+  margin: 0;
+  padding: 12px;
+}
+
+.filter-group legend {
+  padding: 0 4px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.chip {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 12px;
+  color: var(--ink);
+  background: #fff;
+  cursor: pointer;
+}
+
+.chip.is-active {
+  border-color: var(--teal);
+  color: #fff;
+  background: var(--teal);
+}
+
+.results-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.results-bar p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.text-button {
+  min-height: 38px;
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 12px;
+  color: #fff;
+  background: var(--rose);
+  cursor: pointer;
+}
+
+.attraction-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.attraction-card {
+  overflow: hidden;
+}
+
+.attraction-card__image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: linear-gradient(135deg, #b9d4cc, #e2d6bf);
+}
+
+.attraction-card__image.image-fallback::after {
+  content: "代表照片加载中";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--teal);
+  font-weight: 800;
+}
+
+.attraction-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.attraction-card__body {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+}
+
+.card-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.card-title-row h3,
+.intro,
+.recommend,
+.nearby {
+  margin: 0;
+}
+
+.card-title-row span {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: #fff;
+  background: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.tag-row span {
+  color: var(--teal);
+  background: #e7f0ed;
+}
+
+.recommend {
+  border-left: 4px solid var(--gold);
+  padding-left: 10px;
+  color: #394743;
+  font-weight: 700;
+}
+
+.facts {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.facts div {
+  display: grid;
+  gap: 2px;
+}
+
+.nearby {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.empty-state {
+  padding: 24px;
+  text-align: center;
+}
+
+.footer {
+  padding: 34px 18px 42px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (min-width: 760px) {
+  .hero {
+    min-height: 520px;
+    padding: 48px 28px;
+  }
+
+  .section {
+    padding: 46px 28px 0;
+  }
+
+  .plans {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .filters {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter-group:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .attraction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .section--filters {
+    position: static;
+    backdrop-filter: none;
+  }
+
+  .filters {
+    grid-template-columns: 1.08fr 1fr 1fr;
+  }
+
+  .filter-group:first-child {
+    grid-column: auto;
+  }
+
+  .attraction-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
