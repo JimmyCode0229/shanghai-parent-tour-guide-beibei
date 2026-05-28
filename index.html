@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>父母上海安心游攻略</title>
+    <meta name="description" content="适合父母来上海周末游的景点推荐，可按行政区、景点类型和舒适度筛选。">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">徐汇 / 静安 / 黄浦 / 长宁 / 杨浦 / 虹口 / 普陀 / 浦东</p>
+        <h1>父母上海安心游攻略</h1>
+        <p class="hero__lead">给周五到周日来上海的父母准备：6 条经典路线、核心景点筛选、少折腾但看得出上海味道。</p>
+        <div class="hero__badges" aria-label="推荐特点">
+          <span>不太累</span>
+          <span>可拍照</span>
+          <span>有雨天备选</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" aria-labelledby="plans-title">
+        <div class="section__heading">
+          <p class="eyebrow">周五到周日可自由组合</p>
+          <h2 id="plans-title">6 条经典推荐路线</h2>
+        </div>
+        <div id="plans" class="plans"></div>
+      </section>
+
+      <section class="section section--filters" aria-labelledby="filters-title">
+        <div class="section__heading">
+          <p class="eyebrow">按你们当天状态筛选</p>
+          <h2 id="filters-title">景点筛选</h2>
+        </div>
+        <div id="filters" class="filters"></div>
+        <div class="results-bar">
+          <p id="resultCount"></p>
+          <button id="resetFilters" class="text-button" type="button">重置筛选</button>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="attractions-title">
+        <div class="section__heading">
+          <p class="eyebrow">景点详情</p>
+          <h2 id="attractions-title">适合父母的景点</h2>
+        </div>
+        <div id="attractionGrid" class="attraction-grid"></div>
+        <div id="emptyState" class="empty-state" hidden>
+          <h3>没有符合条件的景点</h3>
+          <p>可以少选一个筛选条件，或直接重置后从推荐路线开始看。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>出行前请再次确认预约、闭馆日、临时活动和天气。页面内容适合作为周末规划参考。</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
